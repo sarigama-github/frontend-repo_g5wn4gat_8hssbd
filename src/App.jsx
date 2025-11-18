@@ -6,26 +6,30 @@ import UseCases from './components/UseCases'
 import Pricing from './components/Pricing'
 import FAQ from './components/FAQ'
 import FinalCTA from './components/FinalCTA'
+import WhyDifferent from './components/WhyDifferent'
+import AnimatedBackground from './components/AnimatedBackground'
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
-      <header className="sticky top-0 z-10 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200">
+      <header className="sticky top-0 z-20 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-6 w-6 rounded-md bg-gradient-to-br from-indigo-500 to-pink-500" />
             <span className="font-semibold">qr.lt</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm text-slate-700">
+            <a href="#why" className="hover:text-slate-900">Why qr.lt?</a>
             <a href="#how" className="hover:text-slate-900">How it works</a>
-            <a href="#" className="hover:text-slate-900">Pricing</a>
             <a href="#cta" className="inline-flex items-center rounded-full bg-slate-900 text-white px-4 py-2 font-semibold">Get early access</a>
           </nav>
         </div>
       </header>
 
-      <main>
+      <main className="relative">
+        <AnimatedBackground />
         <Hero />
+        <WhyDifferent />
         <Who />
         <Benefits />
         <HowItWorks />
